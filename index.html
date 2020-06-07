@@ -7,11 +7,25 @@
     <link rel="stylesheet" href="/assets/styleFUGR.css">
 </head>
 <body>
-    <h1>Hola Mundo IRD32</h1>
-    <h2>Hola Mundo IRD32</h2>
-    <h13>Hola Mundo IRD32</h3>
-    <h4>Hola Mundo IRD32</h4>
-    <h4>Hola Mundo IRD32</h4>
-
+    <form action="ejemplo.php" method="get">
+        <form action="ejemplo.php" method="get">
+            <p>usuario: <input type="text"  name="usuario" size="30"></p>
+            <p>Nombre: <input type="text" name="nombre" size="40"></p>
+            <p>Correo: <input type="email" name="correo" size="40"></p>
+            <p>Edad:
+                <input type="radio" name="edad" value="menor"> Menor
+                <input type="radio" name="edad" value="adulto" required> Adulto
+              </p>
+            <p>domicilio: <input type="add" name="domicilio" size="30"></p>
+            <p>Teléfono: <input type="tel" name="telefono"></p>
+            <p>Sexo:
+              <input type="radio" name="hm" value="h"> Hombre
+              <input type="radio" name="hm" value="m"> Mujer
+            </p>
+            <p>
+              <input type="submit" value="Enviar">
+              <input type="reset" value="Borrar">
+            </p>
+          </form>
 </body>
 </html>
