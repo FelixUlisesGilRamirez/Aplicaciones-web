@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/styleFUGR.css">
-    <link rel="#" href="nav.php"
+    <link rel="#" href="nav.php">
     <script src="https://kit.fontawesome.com/3952530bcb.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -27,10 +27,16 @@
           <ul class="dropdown-menu">
             <li><a href="#" class="dropdown-item">nuevo usuario</a></li>
             <li><a href="#" class="dropdown-item">ver usuario</a></li>
-            <li><a href="#" class="dropdown-item">detalles de usuario</a></li>
+            <li><a href="#" class="dropdown-item"> detalles de usuario</a></li>
           </ul>
-          <li class="nav-item">
-          <a class="nav-link" href="reservaciones.html">Reservaciones</a>
+        </li>
+        <li class="dropdown nav-item">
+          <a class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="reservaciones.html">Reservaciones</a>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="dropdown-item">nueva reservacion</a></li>
+            <li><a href="#" class="dropdown-item">ver reservacion</a></li>
+            <li><a href="Reservaciones.html" class="dropdown-item">detalles de reservacion</a></li>
+        </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Registroperro.html">Registro Perros</a>
@@ -48,7 +54,7 @@
   <div class="container">
     <form>
       <div class="form-group">
-        <h1 class="text-center"> formulario con bootstrap</h1>
+        <h1 class="text-center"> formulario usuario</h1>
          <div class="row">
           <div class="col-md-2 col-lg-2">
             <p>usuario: <input type="text"  name="usuario" size="30"></p>
