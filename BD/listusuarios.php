@@ -1,3 +1,8 @@
+<?php 
+//include '../BD/listusuarios.php';
+include '../BD/conexion.php';
+//echo hola ();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,8 +76,8 @@
           <td>7212243412</td>
         </tr>
         <td><button type="button" class="btn btn-primary">Ver</button>
-          <button type="button" class="btn btn-warning">Editar</button>
-          <button type="button"  class="btn btn-danger">Eliminar</button>
+                  <button type="button" class="btn btn-warning">Editar</button>
+                  <button type="button"  class="btn btn-danger">Eliminar</button>
         </td>
         <tr>
           <td>carlos</td>

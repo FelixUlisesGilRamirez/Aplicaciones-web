@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-image: url(imagen.jpg);
+    background: src url(img/imagen.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -14,7 +14,7 @@ body {
 }
 .formulario{
     background: #fff;
-    margin-top: 150px;
+    margin-top: 100px;
     padding: 3px;
 }
 h1{
@@ -67,7 +67,7 @@ font-weight: 600;
     .formulario{
         margin: auto;
         width: 500px;
-        margin-top: 150px;
-        border-radius: 2%;
+        margin-top: 50px;
+        border-radius: 10%;
     }
 }

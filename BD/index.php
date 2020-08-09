@@ -1,3 +1,6 @@
+<?php  
+include '../../BD/conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,11 +25,21 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="Usuarios.html">usuarios</a>
-          </li>
-        <li class="nav-item">
-            <a class="nav-link" href="Reservaciones.html">reservaciones</a>
+        <li class="dropdown nav-item">
+          <a class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="Usuarios.html">usuario </a>
+          <ul class="dropdown-menu">
+            <li><a href="#" class="dropdown-item">nuevo usuario</a></li>
+            <li><a href="#" class="dropdown-item">ver usuario</a></li>
+            <li><a href="Usuarios.html" class="dropdown-item"> detalles de usuario</a></li>
+          </ul>
+        </li>
+        <li class="dropdown nav-item">
+          <a class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="reservaciones.html">Reservaciones</a>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="dropdown-item">nueva reservacion</a></li>
+            <li><a href="#" class="dropdown-item">ver reservacion</a></li>
+            <li><a href="Reservaciones.html" class="dropdown-item">detalles de reservacion</a></li>
+        </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Registroperro.html">Registro Perros</a>
@@ -42,33 +55,29 @@
     </div>
   </nav>
   <div class="container-fluid">
-    <form action="../BD/usuarios.php" method="POST">
+    <form action='../BD/usuarios.php' method='POST'>
       <div class="form-group">
         <h1 class="text-center"> formulario usuario</h1>
          <div class="row">
           <div class="col-md-2 col-lg-2">
-            <p>Nombres: <input type="text" class="form-control" name="nombres" size="30"></p>
+            <p>nombres: <input type="text" class="form-control" name="nombres" size="30"></p>
           </div>
           <div class="col-md-2 col-lg-2">
-            <p>Apellidos: <input type="text" class="form-control" name="Apellidos" size="40"></p>
+            <p>apellidos: <input type="text" class="form-control" name="apellidos" size="40"></p>
           </div>
           <div class="col-md-2 col-lg-2">
-            <p>Correo: <input type="email" class="form-control" name="correo" size="40"></p>
+            <p>correo: <input type="email" class="form-control" name="correo" size="40"></p>
           </div>
           <div class="col">
             <p>domicilio: <input type="add" class="form-control" name="domicilio" size="30"></p>
           </div>
           <div class="col">
-            <p>Teléfono: <input type="tel" class="form-control" name="telefono"></p>
+            <p>teléfono: <input type="tel" class="form-control" name="telefono"></p>
           </div>
           <div class="col">
-            <p>Edad: <input type="age" class="form-control" name="edad"></p>
-          </div>
-          <div class="w-100">
-            <p>Sexo:
-              <input type="radio" class="form-control" name="hm" value="h"> Hombre
-              <input type="radio" class="form-control" name="hm" value="m"> Mujer
-            </p>
+            <p>edad: <input type="age" class="form-control" name="edad"></p>
+                
+          
           </div>
             <p>
               <input type="submit" value="Enviar">

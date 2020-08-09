@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/3952530bcb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel= "stylesheet" href ="assets/stylelogin.css">
+
 </head>
 <body>
   <body background="img/fondo.webp">
@@ -25,12 +26,21 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="Usuarios.html">usuarios</a>
-              </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Reservaciones.html">reservaciones</a>
+            <li class="dropdown nav-item">
+              <a class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="Usuarios.html">usuario </a>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item">nuevo usuario</a></li>
+                <li><a href="#" class="dropdown-item">ver usuario</a></li>
+                <li><a href="Usuarios.html" class="dropdown-item"> detalles de usuario</a></li>
+              </ul>
             </li>
+            <li class="dropdown nav-item">
+              <a class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="reservaciones.html">Reservaciones</a>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-item">nueva reservacion</a></li>
+                <li><a href="#" class="dropdown-item">ver reservacion</a></li>
+                <li><a href="Reservaciones.html" class="dropdown-item">detalles de reservacion</a></li>
+            </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Registroperro.html">Registro Perros</a>
@@ -45,25 +55,32 @@
           </form>
         </div>
       </nav>
-    <form class="formulario">
-        <h1>login</h1>
+      <form class="formulario">
+        <h1>Registro</h1>
         <div class="contenedor">
+          <form action='../BD/registros.php' method='POST'>
+            <div class="input-contenedor">
+                <i class="fas fa-user-edit icon"></i>
+                <input type="text" class="form-control" name="nombre_usuario" placeholder="nombre usuario" size="25">
+
+            </div>
             <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="text" placeholder="correo electronico">
+                <input type="text" class="form-control" name="mail" placeholder="mail"  size="30">
 
             </div>
             <div class="input-contenedor">
                 <i class="fas fa-lock icon"></i>
-                <input type="password" placeholder="Contraseña">
+                <input type="password" class="form-control" name="contraseña" placeholder="contraseña" size="35">
 
             </div>
-            <input type="submit" value="login" class="button">
+            <input type="submit" value="Registrate" class="button">
             <p>Al registrate, aceptas nuestras condiciones de uso
             y politica de privacidad.</p>
-            <p>¿no tiene una cuenta?<a class="link" href="registro.html">Registrate</a></p>
+            <p>¿ya tiene una cuenta?<a class="link" href="login.html">Iniciar sesion</a></p>
         </div>
     </form>
+</form>
 <!-- footer -->
 <footer class="page-footer font-small blue fixed-bottom">
     <i class="fab fa-whatsapp"></i>
