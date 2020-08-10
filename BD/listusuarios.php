@@ -45,54 +45,42 @@ include '../BD/conexion.php';
   </nav>
   <div class="container">
     <div class="row col-md-12 col-lg-12 col-xs-12">
-      <h3 class="text-left"></h3>
+      <h3 class="text-left">lista de usuarios</h3>
+      
         <!--Tabla de Reservaciones -->
-        <div class="container-fluid">
-          <table class="table">
+        <div class="container-fluid table-responsive">
+          <table class="table table-striped">
             <thead class="thead-dark">
         <tr>
-          <th>Nombre</th>
-          <th>Edad</th>
-          <th>Domicilio</th>
-          <th>e-mail</th>
-          <th>Telefono</th>
+          <th class="col">nombres</th>
+          <th class="col">apellidos</th>
+          <th class="col">correo</th>
+          <th class="col">domicilio</th>
+          <th class="col">Telefono</th>
+          <th class="col">edad</th>
         </tr>
-        <tr>
-          <td>carlos</td>
-          <td>19 años</td>
-          <td>calle avenida hidalgo</td>
-          <td>carlos@gmail.com</td>           
-          <td>7212243412</td>
-        </tr>
-        <td><button type="button" class="btn btn-primary">Ver</button>
-          <button type="button" class="btn btn-warning">Editar</button>
-          <button type="button"  class="btn btn-danger">Eliminar</button>
-        </td>
-        <tr>
-          <td>carlos</td>
-          <td>19 años</td>
-          <td>calle avenida hidalgo</td>
-          <td>carlos@gmail.com</td>           
-          <td>7212243412</td>
-        </tr>
-        <td><button type="button" class="btn btn-primary">Ver</button>
-                  <button type="button" class="btn btn-warning">Editar</button>
-                  <button type="button"  class="btn btn-danger">Eliminar</button>
-        </td>
-        <tr>
-          <td>carlos</td>
-          <td>19 años</td>
-          <td>calle avenida hidalgo</td>
-          <td>carlos@gmail.com</td>           
-          <td>7212243412</td>
-          <td><button type="button" class="btn btn-primary">Ver</button>
-                  <button type="button" class="btn btn-warning">Editar</button>
-                  <button type="button"  class="btn btn-danger">Eliminar</button>
-                </td>
-        </tr>
+        </thead>
+              <tbody>
+                      <?php 
+                        $queryResult = $pdo->query("SELECT * FROM usuarios");
+                            while($usuarios = $queryResult->fetch(PDO::FETCH_ASSOC)){ ?>
+                    <tr scope="row">    
+                  <td><?php echo $usuarios['id_Usuarios'] ?></td>
+                  <td><?php echo $usuarios['nombres'] ?></td>
+ 
+                  <td>
+                    <!--<button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>-->
+                    <?php echo '<a class="btn btn-primary" href="modificarUsuarios.php?id_Usuarios=' . $usuarios['id_Usuarios'] . '" role="button"> Editar<a/> ' ?>
+                    <?php echo '<a class="btn btn-danger" href="deleteUsuarios.php?id_Usuarios=' . $usuarios['id_Usuarios'] . '" role="button"> Eliminar<a/> ' ?>
+                  </td>
+                </tr>
+                <?php } ;?>
+ 
+            </tbody>
     </table>
-
-    
+    </div>
+    </div>
+    </div>
 
      <!-- footer -->
   <footer class="page-footer font-small blue fixed-bottom">
@@ -102,7 +90,6 @@ include '../BD/conexion.php';
     </div>
     </div>
 </footer>
-
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

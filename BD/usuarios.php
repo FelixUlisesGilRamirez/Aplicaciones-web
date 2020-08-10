@@ -9,7 +9,6 @@ $domicilio = $_POST['domicilio'];
 $telefono= $_POST['telefono'];
 $edad = $_POST['edad'];
 
-
     $mysql_query = "INSERT INTO usuarios(nombres,apellidos,correo, domicilio, telefono, edad)
                     VALUES(:nombres,:apellidos,:correo,:domicilio,:telefono,:edad)";
     $query = $pdo->prepare($mysql_query);

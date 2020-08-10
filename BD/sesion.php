@@ -55,30 +55,20 @@ include '../BD/conexion.php';
     </div>
   </nav>
   <div class="container-fluid">
-    <form action='../BD/usuarios.php' method='POST'>
+    <form action='../BD/login.php' method='POST'>
       <div class="form-group">
         <h1 class="text-center"> formulario usuario</h1>
          <div class="row">
           <div class="col-md-2 col-lg-2">
-            <p>nombres: <input type="text" class="form-control" name="nombres" size="30"></p>
-          </div>
-          <div class="col-md-2 col-lg-2">
-            <p>apellidos: <input type="text" class="form-control" name="apellidos" size="40"></p>
+            <p>usuario: <input type="text" class="form-control" name="usuario" size="30"></p>
           </div>
           <div class="col-md-2 col-lg-2">
             <p>correo: <input type="email" class="form-control" name="correo" size="40"></p>
           </div>
           <div class="col">
-            <p>domicilio: <input type="add" class="form-control" name="domicilio" size="30"></p>
+            <p>contrasena: <input type="password" class="form-control" name="contrasena" size="30"></p>
           </div>
-          <div class="col">
-            <p>teléfono: <input type="tel" class="form-control" name="telefono"></p>
-          </div>
-          <div class="col">
-            <p>edad: <input type="age" class="form-control" name="edad"></p>
-                
           
-          </div>
             <p>
               <input type="submit" value="Enviar">
               <input type="reset" value="Borrar">
